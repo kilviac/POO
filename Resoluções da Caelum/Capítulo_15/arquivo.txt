@@ -1,0 +1,39 @@
+Exercicio do capitulo
+15 da apostila
+Caelum
+
+package Capítulo_15;
+
+import java.io.*;
+
+public class main {
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Digite sua mensagem: ");
+        String linha = br.readLine();
+
+        while (linha != null) {
+            System.out.println(linha);
+            linha = br.readLine();
+        }
+
+        br.close();
+    }
+}
+
+    public static void main(String[] args) throws IOException{
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        Trocando o System.in por um new FileInputStream
+        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("arquivo.txt")));
+
+//        System.out.println("Digite sua mensagem: ");
+        String linha = br.readLine();
+
+        while (linha != null) {
+            System.out.println(linha);
+            linha = br.readLine();
+        }
+
+        br.close();
+    }
